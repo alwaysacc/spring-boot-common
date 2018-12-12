@@ -31,7 +31,7 @@ public class RedisController {
 
 		String info = "";
 		try{
-			redisUtil.set("teststring","ok");
+			redisUtil.lLeftPush("test","teststring","ajjj");
 			info = "success";
 		}catch (Exception e){
 			e.printStackTrace();

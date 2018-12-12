@@ -30,6 +30,7 @@ public class RedisUtil {
 	 * @param key
 	 */
 	public void delete(String key) {
+
 		stringRedisTemplate.delete(key);
 	}
 
@@ -39,12 +40,13 @@ public class RedisUtil {
 	 * @param keys
 	 */
 	public void delete(Collection<String> keys) {
+
 		stringRedisTemplate.delete(keys);
 	}
 
 	/**
 	 * 序列化key
-	 *
+	 * redis存在的key取出序列化
 	 * @param key
 	 * @return
 	 */
@@ -59,6 +61,7 @@ public class RedisUtil {
 	 * @return
 	 */
 	public Boolean hasKey(String key) {
+
 		return stringRedisTemplate.hasKey(key);
 	}
 
@@ -82,6 +85,7 @@ public class RedisUtil {
 	 * @return
 	 */
 	public Boolean expireAt(String key, Date date) {
+
 		return stringRedisTemplate.expireAt(key, date);
 	}
 
@@ -286,7 +290,7 @@ public class RedisUtil {
 
 	/**
 	 * 用 value 参数覆写给定 key 所储存的字符串值，从偏移量 offset 开始
-	 *
+	 * 覆写
 	 * @param key
 	 * @param value
 	 * @param offset
@@ -312,6 +316,7 @@ public class RedisUtil {
 	 * @param maps
 	 */
 	public void multiSet(Map<String, String> maps) {
+
 		stringRedisTemplate.opsForValue().multiSet(maps);
 	}
 
