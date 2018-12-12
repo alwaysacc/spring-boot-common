@@ -11,7 +11,6 @@ public class JsonObjectUtil {
 		
 		String dataStr = JSONArray.fromObject(list).toString();
 		String backStr = "{\"code\":0,\"count\":"+count+",data:"+dataStr+",\"msg\":\"\"}";
-		JSONObject obj = JSONObject.fromObject(backStr);
-		return obj;
+		return JSONObject.fromObject(backStr);
 	}
 }
