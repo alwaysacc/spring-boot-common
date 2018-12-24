@@ -1069,7 +1069,6 @@ public class RedisUtil {
 
 	/**
 	 * 返回元素在集合的排名,有序集合是按照元素的score值由小到大排列
-	 *
 	 * @param key
 	 * @param value
 	 * @return 0表示第一位

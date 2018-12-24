@@ -1,6 +1,7 @@
 package com.cybertech.common;
 
 import java.io.*;
+import java.text.DecimalFormat;
 
 /**
  * ${DESCRIPTION}
@@ -41,5 +42,13 @@ public class CommonUtil {
 			e.printStackTrace();
 		}
 		return null;
+	}
+
+	//整型相除保留两位小数
+	public static String int2Decimal(int a,int b){
+
+		DecimalFormat df = new DecimalFormat("0.00");
+		String rate = df.format((float)a/b);
+		return rate;
 	}
 }
